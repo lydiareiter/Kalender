@@ -20,7 +20,7 @@ $kal_ende_tag = date("N", mktime(0,0,0,date("n",$kal_datum),$kal_tage_gesamt,dat
 <div id="blurry">
     <div id="inhaltOverlay">
         <div id="header">
-            <h1 id= "headerTitle">Termine von dem 15.12.2021</h1>
+            <h1 id= "headerTitle"></h1>
             <div>
                 <img id="imgClose" onclick="close()" src="./img/close_black_24dp.svg" alt="close">
             </div>
