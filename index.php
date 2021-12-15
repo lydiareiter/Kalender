@@ -21,8 +21,8 @@ $kal_ende_tag = date("N", mktime(0,0,0,date("n",$kal_datum),$kal_tage_gesamt,dat
     <div id="inhaltOverlay">
         <div id="header">
             <h1 id= "headerTitle"></h1>
-            <div>
-                <img id="imgClose" onclick="close()" src="./img/close_black_24dp.svg" alt="close">
+            <div id="img">
+                <img id="imgClose" onclick="close(this)" src="./img/close_black_24dp.svg" alt="close">
             </div>
         </div>
     </div>
@@ -43,9 +43,10 @@ $kal_ende_tag = date("N", mktime(0,0,0,date("n",$kal_datum),$kal_tage_gesamt,dat
   </thead>
   <tbody>
 <?php
+/*
   $data = file_get_contents("data2020.csv");
   $obj = json_decode($data);
-  echo $obj;
+  echo $obj;*/
 
   for($i = 1; $i <= $kal_tage_gesamt+($kal_start_tag-1)+(7-$kal_ende_tag); $i++)
   {
