@@ -44,6 +44,8 @@ $kal_ende_tag = date("N", mktime(0,0,0,date("n",$kal_datum),$kal_tage_gesamt,dat
   <tbody>
 <?php
   $data = file_get_contents("data2020.csv");
+  $obj = json_decode($data);
+  echo $obj;
 
   for($i = 1; $i <= $kal_tage_gesamt+($kal_start_tag-1)+(7-$kal_ende_tag); $i++)
   {
