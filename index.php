@@ -54,9 +54,9 @@ $kal_ende_tag = date("N", mktime(0, 0, 0, date("n", $kal_datum), $kal_tage_gesam
         if (date("N", $kal_anzeige_heute_timestamp) == 1)
             echo "    <tr>\n";
         if (date("dmY", $kal_datum) == date("dmY", $kal_anzeige_heute_timestamp))
-            echo "      <td onclick=\"loadTermin(this)\" class=\"kal_aktueller_tag\">", $kal_anzeige_heute_tag, "</td>\n";
+            echo "      <td onclick=\"loadTermin(this)\" id=\"",$kal_anzeige_heute_tag,"\" class=\"kal_aktueller_tag\">", $kal_anzeige_heute_tag, "</td>\n";
         elseif ($kal_anzeige_akt_tag >= 0 and $kal_anzeige_akt_tag < $kal_tage_gesamt)
-            echo "      <td onclick=\"loadTermin(this)\" class=\"kal_standard_tag\">", $kal_anzeige_heute_tag, "</td>\n";
+            echo "      <td onclick=\"loadTermin(this)\" id=\"",$kal_anzeige_heute_tag,"\" class=\"kal_standard_tag\">", $kal_anzeige_heute_tag, "</td>\n";
         else
             echo "      <td class=\"kal_vormonat_tag\">", $kal_anzeige_heute_tag, "</td>\n";
         if (date("N", $kal_anzeige_heute_timestamp) == 7)

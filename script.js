@@ -7,6 +7,31 @@ let body = document.getElementById('body');
 
 imgClose.addEventListener('click', close);
 
+function loadPage(){
+    fetch(`data.php?termin=hi`)
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            augabe(data);
+        })
+        .catch((error) => {
+            console.log('[ERROR]: ', error);
+        });
+}
+
+function augabe(doda){
+    doda.forEach(zeile => {
+        if(zeile[1] == zeile[3]){
+            let tag = new Date(Date.parse(zeile[1], 'MM/DD/YYYY'));
+            let tagId = document.getElementById(tag.getDate());
+            tagId.classList.add('termin');
+        }/*else{
+
+        }*/
+    });
+}
+
 function loadTermin(a) {
     headerTitle.innerHTML = "Termine des " + a.innerHTML + ". ";
     blurry.style.display = "flex";
@@ -52,3 +77,5 @@ function html(data){
 function close() {
     blurry.style.display = "none";
 }
+
+loadPage();
