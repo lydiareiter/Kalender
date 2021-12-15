@@ -48,13 +48,9 @@ td{
 }
 #imgClose{
     float: right;
-    z-index: 3;
+    z-index: 9999999;
 }
 #img{
-    /*
-    height: auto;
-    right: 0;
-    width: auto;*/
     margin-left: auto; 
     margin-right: 0;
 }

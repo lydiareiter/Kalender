@@ -22,7 +22,7 @@ $kal_ende_tag = date("N", mktime(0,0,0,date("n",$kal_datum),$kal_tage_gesamt,dat
         <div id="header">
             <h1 id= "headerTitle"></h1>
             <div id="img">
-                <img id="imgClose" onclick="close(this)" src="./img/close_black_24dp.svg" alt="close">
+                <img id="imgClose" src="./img/close_black_24dp.svg" alt="close">
             </div>
         </div>
     </div>
