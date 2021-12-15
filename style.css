@@ -30,7 +30,9 @@ table{
 }
 td{
     border-radius: 50%;
-    /*border: 3px solid #ddbea9;*/
+}
+.termin{
+    border: 3px solid #ddbea9;
 }
 #blurry{
     display: none;
