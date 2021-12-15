@@ -43,6 +43,8 @@ $kal_ende_tag = date("N", mktime(0,0,0,date("n",$kal_datum),$kal_tage_gesamt,dat
   </thead>
   <tbody>
 <?php
+  $data = file_get_contents("data2020.csv");
+
   for($i = 1; $i <= $kal_tage_gesamt+($kal_start_tag-1)+(7-$kal_ende_tag); $i++)
   {
     $kal_anzeige_akt_tag = $i - $kal_start_tag;
