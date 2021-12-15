@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bolder;
+}
+.kal_aktueller_tag{
+    color: #ffe8d6;
+    background-color: #6b705c;
+}
+caption > h1{
+    font-size: 300%;
+    color: #cb997e;
+    margin-bottom: 20vh;
+    margin-top: 5vh;
+    text-shadow: 12px 15px 10px rgba(0, 0, 0, 0.25);
+}
+thead > tr > th{
+    color: #ddbea9;
+    font-size: larger;
+    padding-bottom: 5vh;
+}
+table{
+    margin: 10 auto;
+    width: 50vw;
+    height: 50vh;
+}
+.kal_vormonat_tag{
+    color: #d3d3ba;
+}
+td{
+    border-radius: 50%;
+    /*border: 3px solid #ddbea9;*/
+}
+#blurry{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0px;
+    backdrop-filter: blur(5px);
+    align-items: center;
+}
+#inhaltOverlay{
+    height: 50vh;
+    width: 50vw;
+    margin: 0 auto;
+}
+#imgClose{
+    width: 100%;
+    height: 100%;
+    /*padding-left: 30vw;*/
+}
+#header{
+    display: flex;
+    flex-direction: row;
+}
