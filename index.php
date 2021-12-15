@@ -25,6 +25,26 @@ $kal_ende_tag = date("N", mktime(0,0,0,date("n",$kal_datum),$kal_tage_gesamt,dat
                 <img id="imgClose" src="./img/close_black_24dp.svg" alt="close">
             </div>
         </div>
+        <div id="body">
+          <?php 
+          $data = preg_split("/\r\n|\n|\r/", file_get_contents("data2020.csv"));
+          $dataArbeiten = array_splice($data, 1, sizeof($data));
+          var_dump($dataArbeiten);
+          
+          /*
+          foreach($csv_array as $day) {
+            $date = date_create_from_format("m/d/y H:i:s ", $day[1] . " " . $day[2]);
+            $kal_date_timestamp = new DateTime();
+            $kal_date_timestamp->setTimestamp($kal_anzeige_heute_timestamp);
+
+            if($kal_date_timestamp->getTimestamp() == $date->getTimestamp()) {
+                $dateBodyLine .= "<p>$day[0]</p>";
+            }
+
+        }*/
+
+          ?>
+        </div>
     </div>
 </div>
 
