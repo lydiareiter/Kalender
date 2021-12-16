@@ -38,14 +38,15 @@ if (isset($_GET['termin'])) {
             if ($date1->format("m/yy") == date("m/yy")) {
                 array_push($terminchen, $i);
             }
-        } else {/*
+        } else {
             for ($i = 0; $i < $dateDifference + 1; $i++) {
                 $dateAlt = $date1;
                 if ((date_add($date1, date_interval_create_from_date_string($i . 'days')))->format("m/yy") == date("m/yy")) {
                     //$date1->date_format("m/d/y");
-                    echo date("t", $dateAlt);
+                    //echo date("t", $dateAlt);
+                    $i[1] = date_format("m/d/y",$date1);
                 }
-            }*/
+            }
         }
 
     }
