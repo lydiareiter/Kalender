@@ -19,7 +19,7 @@ if (isset($_GET['datum'])) {
 
     echo json_encode($toDay);
 }
-if(isset($_GET['termin'])){
+if (isset($_GET['termin'])) {
     $terminchen = [];
 
     $dataCsv = preg_split("/\r\n|\n|\r/", file_get_contents("./data2020.csv"));
@@ -29,11 +29,17 @@ if(isset($_GET['termin'])){
         $dataCsv[$i] = explode(",", $dataCsv[$i]);
     }
 
-    foreach($dataCsv as $i){
-        $date = date_create_from_format("m/d/y", $i[1]);
-        if($date->format("m/yy") == date("m/yy")){
-            array_push($terminchen, $i);
+    foreach ($dataCsv as $i) {
+        $date1 = date_create_from_format("m/d/y", $i[1]);
+        $date2 = date_create_from_format("m/d/y", $i[3]);
+        if ($date1 == $date2) {
+            if ($date1->format("m/yy") == date("m/yy")) {
+                array_push($terminchen, $i);
+            }
+        }else{
+            $date2->get
         }
+
     }
     echo json_encode($terminchen);
 }
