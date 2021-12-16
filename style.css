@@ -61,3 +61,22 @@ td{
     flex-direction: row;
     
 }
+
+.ausgabe{
+    margin: 2vh;
+}
+
+.aufteilung{
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+}
+
+.aufteilung > p{
+    align-items: center;
+    font-size: 200%;
+}
+
+.ausgabeHeader{
+    margin-bottom: 1vh;
+    text-decoration: underline;
+}
