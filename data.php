@@ -34,20 +34,25 @@ if (isset($_GET['termin'])) {
         $date1 = date_create_from_format("m/d/y", $i[1]);
         $date2 = date_create_from_format("m/d/y", $i[3]);
         $dateDifference = intval(date_diff($date1, $date2)->format('%d'));
-        if ($dateDifference == 0) {
+        if (/*$dateDifference == 0  $date1 == $date2*/ $date1 != null) {
             if ($date1->format("m/yy") == date("m/yy")) {
                 array_push($terminchen, $i);
             }
-        } else {
+        }/* else {
+            
             for ($i = 0; $i < $dateDifference + 1; $i++) {
                 $dateAlt = $date1;
                 if ((date_add($date1, date_interval_create_from_date_string($i . 'days')))->format("m/yy") == date("m/yy")) {
-                    //$date1->date_format("m/d/y");
-                    //echo date("t", $dateAlt);
-                    $i[1] = date_format("m/d/y",$date1);
+                    /*$day = date("d", $date1);
+                    $month = date("m", $date1);
+                    $year = date("y", $date1);
+                    echo $i[1] = $month . "/" . $day . "/" . $year;
+                    if ($date1->format("m/yy") == date("m/yy")) {
+                        array_push($terminchen, $i);
+                    }
                 }
             }
-        }
+        }*/
 
     }
     echo json_encode($terminchen);

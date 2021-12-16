@@ -22,25 +22,26 @@ function loadPage() {
 
 function augabe(doda) {
     doda.forEach(zeile => {
-        if (zeile[1] == zeile[3]) {
+        if (/*zeile[1] == zeile[3]*/ zeile[1] != null) {
             let tag = new Date(Date.parse(zeile[1], 'MM/DD/YYYY'));
             let tagId = document.getElementById(tag.getDate());
             if (!tagId.classList.contains('termin')) {
                 tagId.classList.add('termin');
             }
-        } else {
+        } /*else {
             let tag1 = new Date(Date.parse(zeile[1], 'MM/DD/YYYY')).getDate();
             let tag2 = new Date(Date.parse(zeile[3], 'MM/DD/YYYY')).getDate();
 
             let i = tag2 - tag1;
 
             for (let index = 0; index < i + 1; index++) {
-                let tagId2 = document.getElementById(tag1 + i);
+                let id = tag1 + i;
+                let tagId2 = document.getElementById(id);
                 if (!tagId2.classList.contains('termin')) {
                     tagId2.classList.add('termin');
                 }
             }
-        }
+        }*/
     });
 }
 
