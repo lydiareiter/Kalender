@@ -26,9 +26,17 @@ function augabe(doda){
             let tag = new Date(Date.parse(zeile[1], 'MM/DD/YYYY'));
             let tagId = document.getElementById(tag.getDate());
             tagId.classList.add('termin');
-        }/*else{
+        }else{
+            let tag1 = new Date(Date.parse(zeile[1], 'MM/DD/YYYY'));
+            let tag2 = new Date(Date.parse(zeile[3], 'MM/DD/YYYY'));
 
-        }*/
+            let i = tag2 - tag1;
+
+            for (let index = 0; index < i+1; index++) {
+                let tagId = document.getElementById((tag1 + i).getDate());
+                tagId.classList.add('termin');
+            }
+        }
     });
 }
 
